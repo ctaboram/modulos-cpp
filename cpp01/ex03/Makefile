@@ -13,7 +13,7 @@
 NAME		= weapon
 
 CXX			= c++
-CXXFLAGS	= -Wall -Wextra -Werror -std=c++98
+CXXFLAGS	= -Wall -Wextra -Werror -std=c++98 -D__USE_MINGW_ANSI_STDIO=0
 SRCS		= main.cpp HumanA.cpp HumanB.cpp Weapon.cpp
 
 OBJS		= $(SRCS:.cpp=.o)
