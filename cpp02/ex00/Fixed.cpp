@@ -4,27 +4,28 @@ const int Fixed::_fractionalBits = 8;
 
 Fixed::Fixed()
 {
-    std::cout << "Fixed object created with constructor" << std::endl;
+    std::cout << "Default constructor called" << std::endl;
+    this->_value = 0;
 }
 Fixed::~Fixed()
 {
-    std::cout << "Fixed object destroyed" << std::endl;
+    std::cout << "Destructor called" << std::endl;
 }
 Fixed::Fixed(const Fixed &cpy)
 {
-    std::cout << "Fixed object copied" << std::endl;
-    *this = cpy; 
+    std::cout << "Copy constructor called" << std::endl;
+    this->_value = cpy.getRawBits(); 
 }
 Fixed &Fixed::operator=(const Fixed &copy)
 {
-    std::cout << "Assigment operator called"<< std::endl;
+    std::cout << "Copy assignment operator called"<< std::endl;
     this->_value = copy.getRawBits();
     return(*this);
 }
 
 int Fixed::getRawBits() const
 {
-    std::cout << "getrawBits member function called" << std::endl;
+    std::cout << "getRawBits member function called" << std::endl;
     return(this->_value);
 }
 void    Fixed::setRawBits(const int raw)
