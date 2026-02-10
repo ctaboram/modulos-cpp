@@ -5,16 +5,16 @@
 #                                                     +:+ +:+         +:+      #
 #    By: ctaboada <ctaboada@student.42malaga.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2026/02/03 13:14:07 by ctaboada          #+#    #+#              #
-#    Updated: 2026/02/03 13:14:08 by ctaboada         ###   ########.fr        #
+#    Created: 2026/02/03 13:14:11 by ctaboada          #+#    #+#              #
+#    Updated: 2026/02/03 13:14:47 by ctaboada         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		= operators
+NAME		= clap_trap
 
 CXX			= c++
 CXXFLAGS	= -Wall -Wextra -Werror -std=c++98
-SRCS		= main.cpp Fixed.cpp
+SRCS		= main.cpp ClapTrap.cpp
 
 OBJS		= $(SRCS:.cpp=.o)
 

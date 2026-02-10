@@ -5,22 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ctaboada <ctaboada@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/03 13:13:40 by ctaboada          #+#    #+#             */
-/*   Updated: 2026/02/03 13:13:41 by ctaboada         ###   ########.fr       */
+/*   Created: 2026/02/03 13:13:22 by ctaboada          #+#    #+#             */
+/*   Updated: 2026/02/03 13:23:42 by ctaboada         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Fixed.hpp"
-
-int main(void)
-{
-    Fixed a;
-    Fixed b(a);
-    Fixed c;
-
-    c = b;
-    std::cout << a.getRawBits() << std::endl;
-	std::cout << b.getRawBits() << std::endl;
-	std::cout << c.getRawBits() << std::endl;
-    return 0;
-}

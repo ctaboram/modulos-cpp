@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Fixed.cpp                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ctaboada <ctaboada@student.42malaga.com    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/02/03 13:13:36 by ctaboada          #+#    #+#             */
+/*   Updated: 2026/02/10 13:09:27 by ctaboada         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Fixed.hpp"
 
 const int Fixed::_fractionalBits = 8;
@@ -14,7 +26,7 @@ Fixed::~Fixed()
 Fixed::Fixed(const Fixed &cpy)
 {
     std::cout << "Copy constructor called" << std::endl;
-    this->_value = cpy.getRawBits(); 
+    *this = cpy;
 }
 Fixed &Fixed::operator=(const Fixed &copy)
 {
