@@ -1,8 +1,13 @@
 #ifndef CAT_HPP
 #define CAT_HPP
 
-#include "Animal.hpp"
-class Cat: public Animal {
+#include "AAnimal.hpp"
+#include "Brain.hpp"
+
+class Cat: public AAnimal {
+    private:
+        Brain *_brain;
+
     public:
         Cat();							// Default constructor
 		Cat(const Cat &src);			// Copy constructor
@@ -11,5 +16,8 @@ class Cat: public Animal {
 
         Cat(std::string type);
         virtual void makeSound() const;
+
+        void setIdea(int index, std::string idea);
+        std::string getIdea(int index) const;
 };
 #endif
