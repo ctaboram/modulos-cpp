@@ -1,6 +1,9 @@
 #ifndef ARRAY_HPP
 #define ARRAY_HPP
 
+#include <exception>
+#include <iostream>
+
 template <typename T>
 class Array
 {
@@ -15,7 +18,8 @@ class Array
 
         Array& operator=(const Array& other);
 
-        T& operator[](unsigned int index) const;
+        T& operator[](unsigned int index);
+        const T& operator[](unsigned int index) const;
 
         unsigned int size() const;
 
