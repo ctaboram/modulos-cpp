@@ -11,48 +11,40 @@ class MutantStack : public std::stack<T>{
         MutantStack();
         ~MutantStack();
         MutantStack(const MutantStack &other);
-        MutantStack &operator=(const MutantStack &other);
-
-        void push(T num);
-        void pop();
-        T &top();
-        bool empty() const;
-        // se pone typename delante porque sino el compilador no sabe si es o un tipo o un atributo estatico o lo que sea
-        typename std::stack<T>::size_type size() const;
+        MutantStack &operator=(const MutantStack &other);   
 
         iterator begin();
         iterator end();
     };
 
 template <typename T>
-void MutantStack<T>::push(T num)
-{
-    std::stack<T>::push(num);
-}
+    MutantStack<T>::MutantStack() : std::stack<T>()
+    {}
 
 template <typename T>
-void MutantStack<T>::pop()
-{
-    std::stack<T>::pop();
-}
+    MutantStack<T>::~MutantStack()
+    {}
 
 template <typename T>
-T &MutantStack<T>::top()
-{
-    return std::stack<T>::top();
-}
+    MutantStack<T>::MutantStack(const MutantStack &other) : std::stack<T>(other)
+    {
 
+    }
 template <typename T>
-bool MutantStack<T>::empty() const
-{
-    if(std::stack<T>::empty() == true)
-        return true;
-    return false;
-}
+    MutantStack<T>& MutantStack<T>::operator=(const MutantStack &other)
+    {
+        if(this != &other)
+            std::stack<T>::operator= (other);
+        return *this;
+    }
 template <typename T>
-typename std::stack<T>::size_type MutantStack<T>::size() const
-{
-    return std::stack<T>::size();
-}
-
+    typename MutantStack<T>::iterator MutantStack<T>::begin()
+    {
+        return this->c.begin();
+    }
+template <typename T>
+    typename MutantStack<T>::iterator MutantStack<T>::end()
+    {
+        return this->c.end();
+    }
 #endif

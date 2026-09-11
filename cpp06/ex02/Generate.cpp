@@ -10,7 +10,7 @@ Base* generate(void)
     static bool seeded = false;
     if (!seeded)
     {
-        std::srand(static_cast<unsigned int>(std::time(NULL)));
+        std::srand(static_cast<unsigned int>(std::time(NULL)) + std::clock());
         seeded = true;
     }
 
