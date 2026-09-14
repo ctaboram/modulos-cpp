@@ -5,6 +5,7 @@
 #include <iostream>
 #include <string>
 #include <fstream>
+#include <cstdlib>
 
 class  BitcoinExchange
 {
@@ -13,6 +14,7 @@ class  BitcoinExchange
 		bool validate_date(const std::string &date);
 		bool validate_date_calendar(const std::string &date);
 		bool validate_format(const std::string &line);
+		bool validate_value(const std::string &valueStr, float &value);
 		float look_map(const std::string &date);
 	public:
 		BitcoinExchange();
