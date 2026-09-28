@@ -6,6 +6,8 @@
 #include <deque>
 #include <vector>
 #include <sys/time.h>
+#include <iomanip>
+#include <cstdlib>
 
 class PmergeMe
 {
@@ -13,6 +15,7 @@ private:
 	std::vector<int> _vector;
 	std::deque<int> _deque;
 	void sortVector(std::vector<int> &arr);
+	void sortDeque(std::deque<int> &arr);
 public:
 	PmergeMe();
 	~PmergeMe();
